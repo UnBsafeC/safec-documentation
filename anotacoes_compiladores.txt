@@ -1,0 +1,223 @@
+PC1  06/04 Entrega no moodle até 07/04
+- Objetivo do trabalho (ok)
+- Estudos já realizado (doing)
+- Estrutura Interna do grupo (ok)
+- Atividades a serem realizadas (+-)
+- Cronograma (+-)
+
+PC2 04/05 Entrega até 05/05
+- Objetivo do trabalho
+- Estudos Realizados
+- Evolução do PC1
+- Dificuldades encontradas
+- Expectativas do andamento frente ao cronograma
+- Eventuais mudanças de escopo
+
+PC3 08/06 Entrega 09/06
+
+- Objetivo do trabalho
+- Estudos Realizados
+- Evolução do PC1
+- Dificuldades encontradas
+- Expectativas do andamento frente ao cronograma
+
+
+Apresentação Final 29/06 Moodle até 30/6
+- Vídeo
+
+#Organização do time
+
+  1- Lider(Coach) da equipe: Carolina Ramalho
+
+  2- Metodologia àgil
+
+    - Sprints de 2 semanas
+    - Reuniões Stand Up 5 minutos iniciais toda aula
+    - Retrospectiva ao final de cada ponto de controle
+    - Release interna a cada sprint
+    - Cada sprint como pequenas funcionalidades do compilador.
+
+
+  3- Ferramentas de comunicação
+
+    - Email
+    - Irc/grupo no telegram
+    - Giter
+
+  4- Repositório
+
+    - Organização: safeC
+    - 1 repositório para o compilador
+
+      https://github.com/UnBsafeC/safec
+
+    - 1 repositório para a documentação do projeto
+
+     https://github.com/UnBsafeC/safec-documentation
+
+  5- Kanban Online para organização das Issues:
+
+    - https://waffle.io/UnBsafeC/safec-documentation
+
+  6- Configuração do ambiente de desenvolvimento
+
+    - Máquina virtual para ambiente de desenvolvimento
+    - Utilizando Vagrant e Virtualbox
+
+  7- Gerência dos requisitos
+    - Os requisitos serão divididos em :
+
+        - Epica: Analisar Código fonte em c e identicar possíveis vulnerabilidades
+        - Features
+          - Cada Feature será um cenário de vulnerabilidade
+        - Histórias de Usuário
+  8- Ferramenta de testes
+      - Utilizaremos a ferramenta cppunit para testes unitários
+
+
+Lista de atividades
+
+Tarefas de desenvolvimento
+
+  - Definição de escopo
+  - Estudo das vulnerabilidades
+  - Descrever o processo para identificar os cenários de vulnerabilidades
+  - Priorização dos cenários
+  - Criar as regras léxicas e sintáticas
+  - Adicionar as regras léxicas e sintaticas
+  - Testar as regras adicionadas
+  - Gerar código comentado
+  - Testar saídas do compilador
+  - Estudo na práticas das ferramentas bison e flex
+  - Escrever diagrama de classes.
+  -
+
+Tarefas de entrega de release
+
+  - Confeccionar vídeo
+  - Organização do time
+  - Revisar documentação de entrega
+
+Semana 0
+
+Dias 16/03 e 18/03
+
+  Definição do Tema
+  Definição da Equipe
+  Definição dos objetivos
+
+Semana 1
+
+Dia 23/03
+
+  - Organização da Equipe
+  - Estudos das vulnerabilidades
+
+Dia 25/03
+
+  - Estudos das vulnerabilidades
+  - Priorização dos cenários
+
+Semana 2
+
+Dia 30/03
+
+  - Escrever diagrama de classes.
+  - Descrever o processo para identificar os cenários de vulnerabilidades
+
+Dia 01/04
+
+  - Estudo na práticas das ferramentas bison e flex
+
+
+############### PONTO DE CONTROLE 1 DIA 06/04
+
+Semana 3
+
+Dia 06/04
+
+  - Apresentação do Ponto de controle 1
+
+Dia 08/04
+
+  - Adicionar as regras léxicas e sintaticas
+  - Criar as regras léxicas e sintáticas
+
+Semana 4
+
+Dia 13/04
+
+
+  - Adicionar as regras léxicas e sintaticas
+  - Testar as regras adicionadas
+
+Dia 15/04
+
+  - Gerar código
+  - Testar saídas do compilador
+  - Escrever diagrama de classes inicial.
+
+Semana 5
+
+Dia 20/04
+
+Dia 22/04
+
+Semana 6
+
+Dia 27/04
+
+Dia 29/04
+
+############### PONTO DE CONTROLE 2 DIA 04/05
+Semana 7
+
+Dia 04/05
+
+Dia 06/05
+
+Semana 8
+
+Dia 11/05
+
+Dia  13/05
+
+Semana 9
+
+Dia 18/05
+
+Dia 20/05
+
+Semana 10
+
+Dia 25/05
+
+Dia 27/05
+
+Semana 11
+
+Dia 01/06
+
+Dia 03/06
+
+############### PONTO DE CONTROLE 1 DIA 08/06
+
+Semana 12
+
+Dia 08/06
+
+Dia 10/06
+
+Semana 13
+
+Dia 15/06
+
+Dia 17/06
+
+############### ENTREGA DIA 29/06
+
+Semana 14
+
+Dia 22/06
+
+Dia 24/06
