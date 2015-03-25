@@ -53,7 +53,12 @@ Referência a ponteiros nulos.
       ◦ Se a posição acessada não estiver dentro dos limites declarado para a array → *Acesso a posição inválida de arrays*
 
 • Divisão por zero
-   ◦ Encontrar uma variável  numéricas.
+   ◦ Encontrar um símbolo de divisão ("/").
+   ◦ Verificar se o segundo argumento é igual a 0.
+      ◦ Se sim → *Divisão por zero*
+      ◦ Se não → Se for uma variável, identificar inicialização da variável
+         ◦ Se a variável tiver sido inicializada com o valor 0 → *Divisão por zero*
+
 
 Atívidades:
 
