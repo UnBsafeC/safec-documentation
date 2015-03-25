@@ -90,12 +90,15 @@ Tarefas de desenvolvimento
   - Testar saídas do compilador
   - Estudo na práticas das ferramentas bison e flex
   - Escrever diagrama de classes.
-  -
+  - Construção da arvore sintatica
+  - Construção da tabela de simbolos e analise semântica
+  - Estudos de Regex
+
 
 Tarefas de entrega de release
 
   - Confeccionar vídeo
-  - Organização do time
+  - Organização da Equipe
   - Revisar documentação de entrega
 
 Semana 0
@@ -124,11 +127,12 @@ Dia 30/03
 
   - Escrever diagrama de classes.
   - Descrever o processo para identificar os cenários de vulnerabilidades
+  - Estudo na práticas das ferramentas bison e flex
 
 Dia 01/04
 
+  - Revisar documentação de entrega
   - Estudo na práticas das ferramentas bison e flex
-
 
 ############### PONTO DE CONTROLE 1 DIA 06/04
 
@@ -137,82 +141,146 @@ Semana 3
 Dia 06/04
 
   - Apresentação do Ponto de controle 1
+  - Retrospectiva do Ponto de controle
 
 Dia 08/04
 
+  - Estudos de Regex
   - Adicionar as regras léxicas e sintaticas
   - Criar as regras léxicas e sintáticas
+  - Construção da arvore sintatica
 
 Semana 4
 
 Dia 13/04
 
-
+  - Estudos de Regex
   - Adicionar as regras léxicas e sintaticas
   - Testar as regras adicionadas
 
 Dia 15/04
 
+  - Estudos de Regex
   - Gerar código
   - Testar saídas do compilador
   - Escrever diagrama de classes inicial.
 
 Semana 5
 
-Dia 20/04
+Dia 20/04  ##### FERIADO dia 21/04
 
 Dia 22/04
+
+  - Construção da tabela de simbolos e analise semântica
+  - Gerar código comentado
 
 Semana 6
 
 Dia 27/04
 
+  - Revisar documentação de entrega do ponto de controle
+  - Correção de bugs no compilador
+
 Dia 29/04
 
+  - Testar saídas do compilador
+  - Revisar documentação de entrega do ponto de controle
+
 ############### PONTO DE CONTROLE 2 DIA 04/05
+
 Semana 7
 
 Dia 04/05
 
+ - Apresentação Ponto de controle 2
+ - Retrospectiva da equipe
+
 Dia 06/05
+
+  -  Correção de dívida técnica do ponto de controle 2
 
 Semana 8
 
 Dia 11/05
 
+  - Adicionar as regras léxicas e sintaticas
+  - Testar as regras adicionadas
+  - Evolução da arvore sintatica
+
+
 Dia  13/05
+
+  - Evolução tabela de simbolos e analise semântica
+  - Evolução do código gerado
 
 Semana 9
 
 Dia 18/05
 
+  - Testar saídas do compilador
+
+
 Dia 20/05
+
+  - Adicionar novas regras léxicas e sintaticas
+  - Testar as regras adicionadas
+  - Evolução da arvore sintatica
+
 
 Semana 10
 
 Dia 25/05
 
+  - Evolução tabela de simbolos e analise semântica
+  - Evolução do código gerado
+
+
 Dia 27/05
+
+  - Evolução tabela de simbolos e analise semântica
+  - Evolução do código gerado
 
 Semana 11
 
 Dia 01/06
 
+  - Revisar documentação de entrega do ponto de controle
+  - Correção de bugs no compilador
+
 Dia 03/06
 
-############### PONTO DE CONTROLE 1 DIA 08/06
+
+  - Correção de bugs no compilador
+  - Testar saídas do compilador
+  - Revisar documentação de entrega do ponto de controle
+
+
+############### PONTO DE CONTROLE 3 DIA 08/06
 
 Semana 12
 
 Dia 08/06
 
+  - Apresentação ponto de controle 3
+  - Restrospectiva do ponto de controle 3
+
 Dia 10/06
+
+  - Finalizar compilador
+  - Correção de bugs no compilador
 
 Semana 13
 
 Dia 15/06
 
+
+  - Finalizar compilador
+  - Correção de bugs no compilador
+
 Dia 17/06
+
+  - Finalizar compilador
+  - Correção de bugs no compilador
 
 ############### ENTREGA DIA 29/06
 
@@ -220,4 +288,10 @@ Semana 14
 
 Dia 22/06
 
+  - Confeccionar Vídeo
+  - Revisar entrega do projeto
+
 Dia 24/06
+
+  - Confeccionar Vídeo
+  - Revisar entrega do projeto
