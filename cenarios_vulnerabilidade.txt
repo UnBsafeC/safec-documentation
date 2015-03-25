@@ -1,0 +1,73 @@
+Cenários de vulnerabilidade:
+
+   • Utilização de variaveis não inicializadas.
+   • Referência a ponteiros nulos.
+   • Referência a posições de memoria já desalocadas previamente.
+   • Desalocar uma região de memória já desalocada (free free).
+   • Não desalocação de memória.
+   • Divisão por 0
+      ◦ Simples: Divisão direta pelo valor 0 (de maneira explícito).
+      ◦ Complexa: Divisão por variáveis que são iguais a 0
+   • Acesso a posições inválidas de uma array estática.
+
+
+Fluxo para identificar os cenários:
+
+Utilização de variaveis não inicializadas.
+
+• Identificar a declaração de uma variável.
+   ◦ Identificar se a variável declarada foi inicializada (Se isso acontecer não existe vulnerabilidade).
+• Caso houve apenas a declaração, seguimos o fluxo.
+• Achar aonde a variável é chamada, se ela nunca for chamada temos uma variável não utilizada(warning).
+   ◦ Identificar se a variável foi inicializada (Se isso acontecer não existe vulnerabilidade).
+   ◦ Se houver uma operação com a variável não inicializada, *vulnerabilidade encontrada.*
+
+
+Referência a ponteiros nulos.
+
+• Identificar a declaração de um ponteiro,
+   ◦ Processo similar ao cenário de  *Utilização de variáveis não inicializadas.*
+
+
+• Referência a posições de memoria já desalocadas previamente.
+   ◦ Identificar o uso da função free.
+      ◦ Recuperar o ponteiro usado na função
+      ◦ Verificar se após a chamada do free nesse ponteiro, o ponteiro é usado em alguma outra operação.
+         ▸ Se essa operação for outro free → *Desalocar uma região de memória já desalocada*
+         ▸ Se for qualquer outro tipo de operação → *Referência a posições de memória já desálocadas*
+
+• Desalocação de memória.
+   
+   • Identificar uma função malloc
+      ◦ Recuperar o ponteiro utilizado.
+   • Percorrer o arquivo em busca de um free para o ponteiro encontrado.
+      ◦ Se não houver um free para o ponteiro em questão → *Não desalocação de memória*
+
+
+• Acesso a posições inválidas de um array
+
+   ◦ Achar a declaração de uma array estática.
+      ◦ Recuperar o tamanho definido para a array.
+   ◦ Encontrar a chamada dessa array.
+      ◦ Recuperar a posição que está sendo acessada.
+      ◦ Se a posição acessada não estiver dentro dos limites declarado para a array → *Acesso a posição inválida de arrays*
+
+• Divisão por zero
+   ◦ Encontrar uma variável  numéricas.
+
+Atívidades:
+
+—   Descrever o processo para identificar os cenários de vulnerabilidade
+—   Delimitar Escopo
+—   Priorização dos cenários  
+—   Organização do time
+—   *Primeiro ponto de controle*
+—   Definir ferramentas.
+—   Configurar ambiente.
+—   Adicionar regras. 
+—   Desenvolver código comentado de expressões gerais. 
+—   *Segundo ponto de controle*
+—   Revisão do ponto de controle
+—   Adicionar regras. 
+—   Desenvolver código comentado de expressões gerais. 
+—   *Terceiro ponto de controle*
