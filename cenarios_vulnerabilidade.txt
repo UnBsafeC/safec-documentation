@@ -12,7 +12,15 @@ Cenários de vulnerabilidade:
 
 
 Fluxo para identificar os cenários:
+(1)
+• Divisão por zero
+   ◦ Encontrar um símbolo de divisão ("/").
+   ◦ Verificar se o segundo argumento é igual a 0.
+      ◦ Se sim → *Divisão por zero*
+      ◦ Se não → Se for uma variável, identificar inicialização da variável
+         ◦ Se a variável tiver sido inicializada com o valor 0 → *Divisão por zero*
 
+(2)
 Utilização de variaveis não inicializadas.
 
 • Identificar a declaração de uma variável.
@@ -22,20 +30,13 @@ Utilização de variaveis não inicializadas.
    ◦ Identificar se a variável foi inicializada (Se isso acontecer não existe vulnerabilidade).
    ◦ Se houver uma operação com a variável não inicializada, *vulnerabilidade encontrada.*
 
-
+(3)
 Referência a ponteiros nulos.
 
 • Identificar a declaração de um ponteiro,
    ◦ Processo similar ao cenário de  *Utilização de variáveis não inicializadas.*
 
-
-• Referência a posições de memoria já desalocadas previamente.
-   ◦ Identificar o uso da função free.
-      ◦ Recuperar o ponteiro usado na função
-      ◦ Verificar se após a chamada do free nesse ponteiro, o ponteiro é usado em alguma outra operação.
-         ▸ Se essa operação for outro free → *Desalocar uma região de memória já desalocada*
-         ▸ Se for qualquer outro tipo de operação → *Referência a posições de memória já desálocadas*
-
+(4)
 • Desalocação de memória.
    
    • Identificar uma função malloc
@@ -43,7 +44,16 @@ Referência a ponteiros nulos.
    • Percorrer o arquivo em busca de um free para o ponteiro encontrado.
       ◦ Se não houver um free para o ponteiro em questão → *Não desalocação de memória*
 
+(5)
+• Referência a posições de memoria já desalocadas previamente.
+   ◦ Identificar o uso da função free.
+      ◦ Recuperar o ponteiro usado na função
+      ◦ Verificar se após a chamada do free nesse ponteiro, o ponteiro é usado em alguma outra operação.
+         ▸ Se essa operação for outro free → *Desalocar uma região de memória já desalocada*
+         ▸ Se for qualquer outro tipo de operação → *Referência a posições de memória já desálocadas*
 
+
+(6)
 • Acesso a posições inválidas de um array
 
    ◦ Achar a declaração de uma array estática.
@@ -51,13 +61,6 @@ Referência a ponteiros nulos.
    ◦ Encontrar a chamada dessa array.
       ◦ Recuperar a posição que está sendo acessada.
       ◦ Se a posição acessada não estiver dentro dos limites declarado para a array → *Acesso a posição inválida de arrays*
-
-• Divisão por zero
-   ◦ Encontrar um símbolo de divisão ("/").
-   ◦ Verificar se o segundo argumento é igual a 0.
-      ◦ Se sim → *Divisão por zero*
-      ◦ Se não → Se for uma variável, identificar inicialização da variável
-         ◦ Se a variável tiver sido inicializada com o valor 0 → *Divisão por zero*
 
 
 Atívidades:
