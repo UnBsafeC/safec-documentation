@@ -1,0 +1,28 @@
+\chapter{Referencial Teórico}
+A definição de uma linguagem é feita em dois passos: (i) estabelecer qual alfabeto usar;       (ii) estabelecer as regras que restringem, das combinações possíveis, aquelas que de fato são as corretas. Tais regras, podem ser classificadas em dois tipos: (i) regras sintáticas que definem a forma correta, preocupando-se com a estrutura das frases; (ii) regras semânticas que definem as condições para que as frases sintaticamente corretas possam ser interpretadas.
+O processamento de uma linguagem divide-se em dois grupos: (i) reconhecimento (análise) (ii) reação (sintese). O reconhecimento é feito através de três tarefas: (i) análise léxica que faz a leitura sequencial dos caracteres do texto fonte, separa as palavras e reconhece os símbolos terminais de cada palavra; (ii) análise sintática que agrupa os símbolos terminais e verifica se formam uma frase sintaticamente correta; (iii) análise semântica que verifica se as regras semânticas são satisfeitas e calcula os valores associados aos símbolos para conhecer o significado completo da frase. Tendo em vista essas três tarefas e o que cada uma é responsável é possível definir as entradas e saídas de cada analisador. O analisador léxico recebe um texto fonte e passa ao analisador sintático os símbolos terminais que reconheceu;  o analisador sintático recebe esses símbolos do analisador léxico e envia ao analisador semântico uma representação interna da estrutura da frase, usando árvore de derivação; o analisador semântico então faz uma árvore de síntese que representa  o significado da frase.
+
+\section{Flex}
+Flex é uma ferramenta responsável por realizar a análise léxica de determinado bloco de palavras. Essas palavras podem ser desde um método em uma linguagem qualquer, até um diagrama UML. A principal atribuição do flex é gerar  “scanners” para as regras definidas em um arquivo com extensão “.lex”[3]. 
+O arquivo com extensão “lex” conterá a estrutura padrão que será interpretada pelo flex para gerar o scanner responsável por realizar a análise léxica. Esse arquivo é subdividido em três blocos básicas: Seção de Declarações, Regras de Tradução e procedimentos auxiliares.
+No bloco “Seção de Declarações” são incluídas as bibliotecas padrões do c ou c++, que serão usadas no processo de análise. Além disso, podemos também escrever qualquer código em linguagem c. Esse código poderá ser chamado dentro do bloco de Regras de Tradução.
+Ainda na Seção de Declarações são definidas as regras utilizadas pelo scanner, para identificar um padrão na linguagem que será analisada.  Essas regras são definidas utilizando linguagem formal, ou mais comumente conhecida como expressões regulares ou regex.
+O segundo bloco, denominado como “Regras de Tradução” é responsável por encontrar os padrões definidos no bloco anterior e realizar alguma ação logo em seguida.
+O ultimo bloco, chamado de “Procedimentos Auxiliares” é uma seção opcional do arquivo com extensão “.lex”. Tudo que é colocado dentro desse bloco é simplesmente copiado para o arquivo que o flex irá gerar.  São rotinas definidas pelo desenvolvedor, que serão chamadas pelo scanner no momento da análise léxica.
+Após a compilação do arquivo .lex, o Flex ira gerar um arquivo com extensão “yy.c”. Esse arquivo quando compilado corretamente com o gcc, irá gerar o scanner, e é ele que irá receber o arquivo de entrada, aplicar as regras definidas no arquivo “.lex” e executar as ações definidas no bloco de Regras de Tradução.
+
+\section{Bison}
+O UNIX original tinha como um de seus componentes, o YACC - Yet Another Compiler Compiler. Ele gera um analisador sintático (que é parte do compilador) a partir de uma especificação formal de uma gramática[6].
+O GNU Bison é a implementação da FSF desta ferramenta e é completamente compatível com o yacc, mas ele inclui coisas a mais. Usando o bison, é possível desde criar simples programas interativos, como calculadores, até analisadores de linguagens de programação bem complexas[6].
+O Bison recebe como entrada uma gramática livre de contexto, e produz código fonte em C capaz de identificar essa gramática.  Essa gramática é descrita em um arquivo com extensão “.y”. Nesse arquivo, assim como no Flex, possuímos uma subdivisão em blocos, que são : Prólogo,Declarações do Bison, Regras Gramáticas.
+O primeiro bloco, chamado de “Prólogo” é utilizado para a definição de macros,variáveis e métodos, que serão utilizados mais a frente. Dentro do prólogo também é possível incluir outros arquivos e bibliotecas por meio do “\#include”. O bloco de Prólogo pode ser itercalado com o bloco de declarações, afim de agrupar logicamente o que estão sendo implementado. Todo o código definido dentro do bloco Prólogo, é colocado logo no início da implementação do parser. 
+O bloco “Declarações do Bison” contem as declarações que definem os símbolos terminais e não terminais. Nesse bloco devemos declarar todos os tokens que irão ser identificados. A declaração do token é feita da seguinte maneira:
+
+\textbf{\%token name}
+
+ Símbolos não terminais também podem ser declarados, caso desejemos definir qual o tipo de estrutura usar para o valor semântico.
+o Bloco “Regras gramaticais” contem uma ou mais regras gramaticais, e apenas isso. As regras. A estrutura básica de uma regra é a seguinte:
+
+\textbf{\%result: componentes…;}
+
+As componentes são uma série de símbolos terminais e não terminais, utilizados para compor a regra. Atrelado a cada regra, podemos definir uma ação qualquer, utilizando código em C.

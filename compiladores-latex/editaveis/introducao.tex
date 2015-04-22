@@ -1,0 +1,30 @@
+\chapter[Introdução]{Introdução}
+
+\section{Problemática}
+No mundo atual, onde praticamente todos estão interligados através da Internet,
+devemos nos preocupar cada vez mais com a segurança dos softwares utilizados. Uma
+simples falha de segurança em um software pode causar desde danos pessoais, como perca
+de arquivos pessoais, até mesmo perca de capital por parte de uma empresa multinacional. Sabendo que vulnerabilidade é um conjunto de condições que podem levar a violação de
+uma política de segurança explícita ou implícita [5], necessita-se identificar possíveis ameaças de vulnerabilidades de código fonte a fim de contorna-las ainda dentro do ciclo de desenvolvimento.
+Como foi dito por Chess e West [4], erros são inevitáveis, mas deve existir uma forma de controla-los ainda dentro do ciclo de desenvolvimento, podendo reduzir possíveis custos futuros de manutenção corretiva do software.
+
+\section{Justificativa}
+Além dos fins acadêmicos, a construção deste compilador servirá de aprendizado de vários aspectos teóricos da disciplina de compiladores, vendo na prática da construção até o funcionamento de um compilador. Além disso a ferramenta poderá auxiliar na busca de possíveis ameaças de vulnerabilidade nos códigos fonte, podendo auxiliar programadores iniciantes levando a construção de um código mais seguro ou até a busca de vulnerabilidades em grandes aplicações.
+
+
+\section{Objetivo Geral}
+Este projeto tem como objetivo a construção de um compilador que seja capaz de analisar as seguintes ameaças de vulnerabilidades[2] em código escrito na linguagem C:
+\begin{itemize}
+\item Ameaça de Vulnerabilidade 1 - Utilização de variáveis não inicializadas.
+\item Ameaça de Vulnerabilidade 2 - Referência a ponteiros nulos.
+\item Ameaça de Vulnerabilidade 3 - Referência a posições de memoria já desalocadas, previamente.
+\item Ameaça de Vulnerabilidade 4 - Desalocar uma região de memória já desalocada (free free).
+\item Ameaça de Vulnerabilidade 5 - Não desalocação de memória.
+\item Ameaça de Vulnerabilidade 6 - Divisão por 0
+\begin{enumerate}
+\item Simples: Divisão direta pelo valor 0 (de maneira explícito).
+\item Complexa: Divisão por variáveis que são iguais a 0
+\end{enumerate}
+\item Ameaça de Vulnerabilidade 7 - Acesso a posições inválidas de uma array estática.
+\end{itemize}
+
